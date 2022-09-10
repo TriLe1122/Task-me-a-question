@@ -1,1 +1,24 @@
 /* BASIC STYLES HERE */
+p {
+  margin: 0;
+}
+
+body {
+  background-image: url(https://wallpapersmug.com/download/1366x768/d19943/northern-lights-lake-sky-nature.jpg);
+  height: 60vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+}
+
+
+
+.rug {
+  background-color: rgba(0, 0, 0, 0.695);
+}
+
+.cloud {
+  background: rgba(122, 118, 118, 0.692);
+}

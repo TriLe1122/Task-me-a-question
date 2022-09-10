@@ -10,35 +10,136 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
     integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Task-me-a-question</title>
 </head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">Task-me-a-question</span>
-      </a>
-    </nav>
-  </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+
+<body class="">
+  <!-- SECTION header that has title and form -->
+  <section class="container">
+    <header>
+      <div class="row justify-content-center">
+
+        <div class="col-5 p-5">
+          <h1 class="text-center m-4rounded rug text-light rounded p-3">TASK ME A QUESTION
+          </h1>
         </div>
       </div>
+
+      <form onsubmit="app.listsController.createList()">
+        <div class="d-flex">
+          <label for="name">List Task Here</label>
+          <input type="text" class="form-control w-100" name="name" required required placeholder="Tasky Task..."
+            required minlength="3" maxlength="15">
+          <label for="color" class="form-label"></label>
+          <label for="color" class="form-label"></label>
+          <input type="color" name="color" class="form-control form-control-color" id="ColorInput" value="#f00000"
+            title="Choose your color" />
+          <button class="btn btn-primary px-4 ms-3 " type="submit">Add</button>
+        </div>
+      </form>
+    </header>
+  </section>
+
+
+  <main>
+
+    <div class="container-fluid ">
+      <div class="row p-3 justify-content-between px-4 " id="list">
+
+        <!-- SECTION this is where the forms will go when submitted -->
+        <!-- <div class="col-md-4 my-3 ">
+          <div class="elevation-5 rounded bg-light ">
+            <div class=" rug p-2 rounded-top d-flex text-white">
+              <img class="" src="" alt="">
+              <div class="d-flex flex-column w-100 justify-content-center">
+                <div class="d-flex  flex-wrap  text-end">
+                  <i onclick="" class="mdi mdi-close selectable text-danger selectable "></i>
+                </div>
+                <div class="text-center mb-3">
+                  <h2 class="text-light text-center py-2 bulletin-font justify-content-between">Task Truckers:</h2>
+                  <p>6/9</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3 cloud">
+              <div id="item" class="pb-3 px-3">
+
+              
+                <div class="d-flex justify-content-between mb-1 mt-2">
+                  <input type="checkbox" name="" id="">
+                  <p class="border-bottom border-2 border-dark text-light">saf334sdffgsdg</p>
+                  <div class="d-flex ">
+                    <i onclick="" class="mdi mdi-delete  selectable"></i>
+                  </div>
+                </div>
+                
+
+                <div class="d-flex justify-content-between mb-1">
+                  <input type="checkbox" name="" id="">
+                  <p class="text-light">saf334sdffgsdg</p>
+                  <div class="d-flex gap-5">
+                    <p>asdfasdfasfd</p>
+                    <i onclick="" class="mdi mdi-delete text-danger selectable"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <input type="checkbox" name="" id="">
+                  <p>saf334sdffgsdg</p>
+                  <div class="d-flex gap-5">
+                    <p>asdfasdfasfd</p>
+                    <i onclick="" class="mdi mdi-delete text-danger selectable"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <input type="checkbox" name="" id="">
+                  <p>saf334sdffgsdg</p>
+                  <div class="d-flex gap-5">
+                    <p>asdfasdfasfd</p>
+                    <i onclick="" class="mdi mdi-delete text-danger selectable"></i>
+                  </div>
+                </div>
+
+
+              </div>
+              <form onsubmit="" class="py-2 pb-3">
+                <div class="form-group d-flex justify-content-between border-bottom border-2 border-danger">
+                  <input class="" type="text" name="description" placeholder="Task Yeah">
+                  <button class="btn" type="submit"><i class="mdi mdi-plus"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div> -->
+
+
+      </div>
+
     </div>
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by CodeWorks</small></p>
-    </div>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
