@@ -16,6 +16,7 @@ export class ListsController {
   constructor() {
     _drawList()
     appState.on('lists', _drawList)
+    appState.on('tasks', _drawList)
   }
 
 

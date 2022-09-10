@@ -1,4 +1,5 @@
 import { List } from "./Models/List.js"
+import { Task } from "./Models/Task.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -9,6 +10,8 @@ class AppState extends EventEmitter {
   values = loadState('values', Value)
   /** @type {import('./Models/List').List[]} */
   lists = loadState('lists', List)
+  /** @type {import('./Models/Task').Task[]} */
+  tasks = loadState('tasks', Task)
 }
 
 export const appState = new Proxy(new AppState(), {
