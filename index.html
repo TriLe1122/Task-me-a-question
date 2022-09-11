@@ -12,6 +12,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
     integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
@@ -43,23 +46,28 @@
     <header>
       <div class="row justify-content-center">
 
-        <div class="col-5 p-5">
+        <div class="col-md-5 p-5">
           <h1 class="text-center m-4rounded rug text-light rounded p-3">TASK ME A QUESTION
           </h1>
         </div>
       </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-between">
+          <form onsubmit="app.listsController.createList()">
+            <div class="d-flex">
+              <label for="name"></label>
+              <input type="text" class="form-control " name="name" required required placeholder="Tasky Task..."
+                required minlength="3" maxlength="15">
+              <label for="color" class="form-label"></label>
+              <input type="color" name="color" class="form-control form-control-color m-3 " id="ColorInput"
+                value="#f0cbc2" title="Choose your color" />
+              <button class="btn btn-outline-light px-4 ms-3 " type="submit">Add</button>
+            </div>
+          </form>
 
-      <form onsubmit="app.listsController.createList()">
-        <div class="d-flex">
-          <label for="name">List Task Here</label>
-          <input type="text" class="form-control w-100" name="name" required required placeholder="Tasky Task..."
-            required minlength="3" maxlength="15">
-          <label for="color" class="form-label"></label>
-          <input type="color" name="color" class="form-control form-control-color" id="ColorInput" value="#f00000"
-            title="Choose your color" />
-          <button class="btn btn-primary px-4 ms-3 " type="submit">Add</button>
         </div>
-      </form>
+
+      </div>
     </header>
   </section>
 

@@ -19,8 +19,8 @@ export class List {
 
   get ListTemplate() {
     return /*html*/ `
-  <div class="col-md-4 my-3 " >
-          <div class="elevation-5 rounded  " style="border:${this.color} 5px solid; border-radius:5%">
+  <div class="col-md-4 my-3 h-80 " >
+          <div class="elevation-5 rounded  " style="border:${this.color} 5px solid; border-radius:5%; border-end-start-radius:0%; border-end-end-radius:0%; border-bottom:0px">
             <div class=" rug p-2 rounded-top d-flex text-white"  >
               <img class="" src="" alt="">
               <div class="d-flex flex-column w-100 justify-content-center" >
@@ -28,15 +28,16 @@ export class List {
                   <i onclick="app.listsController.removeList('${this.id}')" class="mdi mdi-close selectable text-danger selectable "></i>
                 </div>
                 <div class="text-center mb-3">
-                  <h2 class="text-light text-center py-2 bulletin-font justify-content-between">${this.name}</h2>
-                  <div class='d-flex align-items-center'>
-                  <p>${this.TaskTotal.length}</p><p>/</p><p>${this.Tasks.length}</p>
+                  <h2 class=" text-center py-2 bulletin-font justify-content-between"style="color:${this.color} ">${this.name}</h2>
+                  <div class='text-center'>
+                  ${this.TaskTotal.length}/${this.Tasks.length}
 
                   </div>
-                </div>
-              </div>
+                  </div>
+                  </div>
+                  </div>
             </div>
-            <div class="px-3 cloud">
+            <div class="px-3 cloud " style="border:${this.color} 5px solid; border-top:0px; border-radius:5%; border-start-start-radius:0%; border-start-end-radius:0%">
               <div id="item" class="pb-3 px-3">
 
                 
@@ -46,8 +47,8 @@ export class List {
 
               </div>
               <form onsubmit="app.tasksController.createTask('${this.id}')" class="py-2 pb-3">
-                <div class="form-group d-flex justify-content-between border-bottom border-2 border-danger">
-                  <input class="" type="text" name="description" placeholder="Task Yeah">
+                <div class="form-group d-flex justify-content-between ">
+                  <input class="task-yeah" type="text" name="description" placeholder="Task Yeah" required minlength="3">
                   <button class="btn" type="submit"><i class="mdi mdi-plus"></i></button>
                 </div>
               </form>
