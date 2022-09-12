@@ -18,7 +18,7 @@ body {
   background-position: bottom;
   background-attachment: fixed;
   /* background-size: cover; */
-  bor
+
 }
 
 
@@ -31,7 +31,7 @@ body {
 
 
 .cloud {
-  background: rgba(255, 255, 255, 0.459);
+  background: rgba(223, 216, 216, 0.668);
 }
 
 .task-yeah {

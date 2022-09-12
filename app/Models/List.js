@@ -21,7 +21,7 @@ export class List {
     return /*html*/ `
   <div class="col-md-4 my-3 h-80 " >
           <div class="elevation-5 rounded  " style="border:${this.color} 5px solid; border-radius:5%; border-end-start-radius:0%; border-end-end-radius:0%; border-bottom:0px">
-            <div class=" rug p-2 rounded-top d-flex text-white"  >
+            <div class=" rug p-2  d-flex text-white"  >
               <img class="" src="" alt="">
               <div class="d-flex flex-column w-100 justify-content-center" >
                 <div class="d-flex  flex-wrap  text-end" >
@@ -48,7 +48,7 @@ export class List {
               </div>
               <form onsubmit="app.tasksController.createTask('${this.id}')" class="py-2 pb-3">
                 <div class="form-group d-flex justify-content-between ">
-                  <input class="task-yeah" type="text" name="description" placeholder="Task Yeah" required minlength="3">
+                  <input class="task-yeah" type="text" name="description" placeholder="Task Yeah" required >
                   <button class="btn" type="submit"><i class="mdi mdi-plus"></i></button>
                 </div>
               </form>
